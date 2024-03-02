@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --oft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "League Spartan",
+        sans-serif;
+    background-color: var(--white);
+    background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0vw 0vh,
+        26vw 20vh;
+
+}
+
+.main {
+    max-width: 1110px;
+    margin: 115px auto;
+
+}
+
+.main__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    font-size: 3.3rem;
+    color: var(--very-dark-magenta);
+    line-height: .94;
+    margin-bottom: 1.5rem;
+}
+
+.main__text {
+    max-width: 78%;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.42;
+    font-weight: 500;
+    color: var(--dark-grayish-magenta);
+}
+
+.main__rated {
+    margin-top: 15px;
+}
+
+
+.main__rated>div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.7rem;
+    background: var(--light-grayish-magenta);
+    padding: 16px 37px;
+    border-radius: .5rem;
+}
+
+.main__rated p {
+    color: (var(--very-dark-magenta));
+}
+
+.main__rated .img {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.review {
+    margin-right: 95px;
+    margin-bottom: 20px;
+}
+
+.report {
+    margin: 0 46px 18px 48px;
+
+}
+
+.tech {
+    margin-left: 96px;
+}
+
+.main__flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 4.45rem;
+}
+
+.flex-item {
+    background: var(--very-dark-magenta);
+    color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: .5rem;
+    padding-right: 2.7rem;
+}
+
+.main__flex p{
+    color: var(--white);
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 23px;
+    margin-bottom: 27px;
+}
+
+.flex img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main__flex p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+h3 {
+    font-size: 1rem;
+    color: var(--oft-pink);
+}
+
+.my-1 {
+    margin-top: 1rem;
+}
+
+.my-2 {
+    margin-top: 1.97rem;
+}
+
+/*********footer *************/
+
+.footer {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1.8rem;
+    text-align: center;
+    background-color: var(--very-dark-magenta);
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: var(--oft-pink);
+    transition: color 300ms ease-in-out;
+    font-size: 1.1rem;
+}
+
+a:hover {
+    color: var(--light-grayish-magenta);
+}
+
+/************ Media Query *************/
+
+@media screen and (max-width: 1024px) {
+    .main {
+        width: 90%;
+        margin: 115px auto;
+    }
+
+
+}
+
+@media screen and (max-width: 968px) {
+
+    .main__grid {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__flex {
+        display: block;
+    }
+
+    .main__text {
+        max-width: 92%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .flex-item {
+        margin: 2rem 0;
+    }
+
+    .my-1 {
+        margin-top: 0;
+    }
+
+    .my-2 {
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 668px) {
+
+    body {
+        background: url('../images/bg-pattern-top-mobile.svg'),
+            url('../images/bg-pattern-bottom-mobile.svg');
+        background-repeat: no-repeat,
+            no-repeat;
+        background-size: cover,
+            cover;
+        background-position: -32vw 0,
+            0 65vh;
+
+    }
+
+    .main {
+        margin: 78px auto;
+    }
+
+    .report,
+    .review,
+    .tech {
+        margin: 1.5rem 0;
+    }
+
+    .main__rated>div {
+        display: block;
+    }
+
+    .main__flex {
+        margin-top: 1.2rem;
+    }
+
+    .img {
+        margin-bottom: 1rem;
+    }
+
+    .main__rated {
+        margin-top: 0;
+    }
+
+    .main__rated p {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+        margin-bottom: 1.2rem;
+    }
+}
